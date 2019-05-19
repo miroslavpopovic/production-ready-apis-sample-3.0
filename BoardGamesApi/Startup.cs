@@ -37,6 +37,9 @@ namespace BoardGamesApi
 
             app.UseHttpsRedirection();
 
+            // Inject our custom error handling middleware into ASP.NET Core pipeline
+            app.UseMiddleware<ErrorHandlingMiddleware>();
+
             app.UseRouting();
 
             app.UseAuthorization();
