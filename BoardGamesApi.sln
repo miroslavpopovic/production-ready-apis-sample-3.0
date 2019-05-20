@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28902.138
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGamesApi", "BoardGamesApi\BoardGamesApi.csproj", "{B21E1133-4A26-4CCF-ADCE-C7E3EA222947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardGamesApi", "BoardGamesApi\BoardGamesApi.csproj", "{B21E1133-4A26-4CCF-ADCE-C7E3EA222947}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardGamesApi.Tests", "BoardGamesApi.Tests\BoardGamesApi.Tests.csproj", "{3326099E-7955-452B-8CFC-B9F702A7589B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B21E1133-4A26-4CCF-ADCE-C7E3EA222947}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B21E1133-4A26-4CCF-ADCE-C7E3EA222947}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B21E1133-4A26-4CCF-ADCE-C7E3EA222947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3326099E-7955-452B-8CFC-B9F702A7589B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3326099E-7955-452B-8CFC-B9F702A7589B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3326099E-7955-452B-8CFC-B9F702A7589B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3326099E-7955-452B-8CFC-B9F702A7589B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
