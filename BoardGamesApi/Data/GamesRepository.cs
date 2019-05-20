@@ -64,6 +64,8 @@ namespace BoardGamesApi.Data
                 var resourceStream = assembly.GetManifestResourceStream("BoardGamesApi.Data.games.json");
 
                 using var reader = new StreamReader(resourceStream, Encoding.UTF8);
+
+                // TODO: Switch to System.Text.Json
                 using var jsonReader = new JsonTextReader(reader);
 
                 var gamesArray = JObject.Load(jsonReader)["games"];
