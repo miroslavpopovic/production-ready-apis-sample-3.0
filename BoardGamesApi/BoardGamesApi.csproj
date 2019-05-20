@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp3.0\BoardGamesApi.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <Content Remove="Data\games.json" />
   </ItemGroup>
