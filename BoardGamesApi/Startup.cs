@@ -5,9 +5,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NSwag;
-using NSwag.SwaggerGeneration.Processors;
-using NSwag.SwaggerGeneration.Processors.Security;
 
 namespace BoardGamesApi
 {
@@ -28,6 +25,8 @@ namespace BoardGamesApi
 
             services.AddControllers()
                 .AddNewtonsoftJson();
+
+            services.AddVersioning();
 
             services.AddSwagger();
         }

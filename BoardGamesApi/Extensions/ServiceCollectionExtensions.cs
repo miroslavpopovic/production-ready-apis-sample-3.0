@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -33,6 +34,7 @@ namespace BoardGamesApi.Extensions
 
         public static void AddSwagger(this IServiceCollection services)
         {
+            // TODO: Update after the new version of ApiVersioning is released
             services.AddSwaggerDocument(
                 options =>
                 {
@@ -69,6 +71,24 @@ namespace BoardGamesApi.Extensions
                             Url = "https://opensource.org/licenses/MIT"
                         };
                     };
+                });
+        }
+
+        public static void AddVersioning(this IServiceCollection services)
+        {
+            services.AddApiVersioning(
+                options =>
+                {
+                    options.AssumeDefaultVersionWhenUnspecified = true;
+                    options.ReportApiVersions = true;
+                });
+            services.AddVersionedApiExplorer(
+                options =>
+                {
+                    options.GroupNameFormat = "'v'VVV";
+                    options.SubstitutionFormat = "'v'VVV";
+                    options.SubstituteApiVersionInUrl = true;
+                    options.ApiVersionParameterSource = new UrlSegmentApiVersionReader();
                 });
         }
     }
