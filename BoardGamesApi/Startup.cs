@@ -52,6 +52,8 @@ namespace BoardGamesApi
 
             app.UseRouting();
 
+            app.UseMiddleware<LimitingMiddleware>();
+
             app.UseAuthorization();
 
             app.UseSwagger();
