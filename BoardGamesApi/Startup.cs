@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NSwag;
+using NSwag.SwaggerGeneration.Processors;
+using NSwag.SwaggerGeneration.Processors.Security;
 
 namespace BoardGamesApi
 {
@@ -25,6 +28,8 @@ namespace BoardGamesApi
 
             services.AddControllers()
                 .AddNewtonsoftJson();
+
+            services.AddSwagger();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -48,6 +53,9 @@ namespace BoardGamesApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+            app.UseSwaggerUi3();
 
             app.UseEndpoints(endpoints =>
             {
