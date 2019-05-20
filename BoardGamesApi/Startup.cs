@@ -30,6 +30,7 @@ namespace BoardGamesApi
                 .AddNewtonsoftJson();
 
             services.AddSwagger();
+            services.AddHealthChecks();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -62,6 +63,7 @@ namespace BoardGamesApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/live");
             });
         }
     }
