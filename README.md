@@ -11,3 +11,4 @@ To follow up the presentation, switch through the various numbered git branches.
 ## Download (TODO)
 
 - [Postman collection](board-games-api-postman-collection.json) for testing the API
+- [NT konferenca presentation](ntk-production-ready-apis.pptx)
